@@ -1,0 +1,73 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	background-color: #f2f2f2;
+}
+
+.mesa {
+	display: grid;
+	grid-template-columns: repeat(4, 120px);
+	grid-template-rows: repeat(3, 140px);
+	grid-gap: 10px;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.carta {
+	width: 100px;
+	height: 140px;
+	background-color: white;
+	border: 2px solid #555;
+	border-radius: 8px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-weight: bold;
+	transition: transform 0.2s;
+}
+
+.carta:hover {
+	transform: scale(1.05);
+}
+
+.carta.selecionada {
+	border: 2px solid red;
+}
+
+
+/* Estilo base permanece igual */
+
+.carta.completo {
+	opacity: 1;
+}
+
+.carta.listrado {
+	background-image: repeating-linear-gradient(45deg,
+			white,
+			white 5px,
+			rgba(0, 0, 0, 0.05) 5px,
+			rgba(0, 0, 0, 0.05) 10px);
+}
+
+.carta.vazado {
+	opacity: 0.6;
+}
+
+/* CANVA */
+
+.carta-canvas {
+	width: 100px;
+	height: 140px;
+	border: 2px solid #555;
+	border-radius: 8px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+	cursor: pointer;
+	background-color: white;
+  }
+  
+  .carta-canvas.selecionada {
+	border: 2px solid red;
+  }
+  
